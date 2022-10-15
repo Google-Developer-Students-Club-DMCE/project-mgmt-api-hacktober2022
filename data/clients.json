@@ -1,0 +1,32 @@
+[
+    {
+        "_id": "63307133a3b105419391c3d9",
+        "name": "Tony Stark",
+        "email": "ironman@gmail.com",
+        "phone": "343-567-4333"
+    },
+    {
+        "_id": "63307133a3b105419391c3db",
+        "name": "Natasha Romanova",
+        "email": "blackwidow@gmail.com",
+        "phone": "223-567-3322"
+    },
+    {
+        "_id": "63307133a3b105419391c3dc",
+        "name": "Thor Odinson",
+        "email": "thor@gmail.com",
+        "phone": "324-331-4333"
+    },
+    {
+        "_id": "63307133a3b105419391c3d8",
+        "name": "Steve Rogers",
+        "email": "steve@gmail.com",
+        "phone": "344-562-6787"
+    },
+    {
+        "_id": "63307133a3b105419391c3da",
+        "name": "Bruce Banner",
+        "email": "bruce@gmail.com",
+        "phone": "321-468-8887"
+    }
+]
