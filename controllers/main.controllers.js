@@ -28,7 +28,22 @@ exports.getProject = async (req, res, next) => {
 // @desc    Get single client
 // @route   GET api/client/:id
 exports.getClient = async (req, res, next) => {
-  // Fetch single client
+  const id = req.params.id;
+  try{
+    const client = await Client.findById(id);
+    const response = {
+      id: client.id,
+      name: client.name,
+      email: client.email,
+      phone: client.phone
+    }
+    res.json(response);
+    res.status(200);
+  }
+  catch(error){
+    console.log(error);
+    res.sendStatus(500);
+  }
 };
 
 // @desc    Delete project
