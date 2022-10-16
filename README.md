@@ -54,7 +54,7 @@ Starter code is already provided in `controllers/main.controllers.js` file.<br>
 [Vighnesh Manjrekar](https://github.com/VighneshManjrekar)
 
 ## 🚀 About Me
-GDSC-DMCE
+GDSC-DMCE Backend Lead 2022
 
 
 
