@@ -41,6 +41,14 @@ exports.deleteProject = async (req, res, next) => {
 // @route   DELETE api/client/:id
 exports.deleteClient = async (req, res, next) => {
   // Delete client with req.params.id
+  const { id: _id } = req.params;
+  Client.findByIdAndDelete(_id, (err, docs) => {
+    if (err) console.log(err);
+    else {
+      console.log("Deleted :", docs);
+      res.json(docs);
+    }
+  });
 };
 
 // @desc    Update project
