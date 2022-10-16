@@ -1,6 +1,7 @@
-# Project management
 
-> Backend API for project management application, where users can create projects and add clients to the projects
+# Project management Application API
+Backend API for project management application, where users can create projects and add clients to the projects
+
 
 ## Usage
 
@@ -40,13 +41,25 @@ Starter code is already provided in `controllers/main.controllers.js` file.<br>
 ## How to Contribute
 - Create the issue.
 - Fork the Repo.
+- Create a new Branch [git checkout -b "new branch name"]
 - Fix the issue.
 - Generate a Pull Request.
 - Wait for your PR to get merged.
 
-# Technologies to be used:
+## Technologies to be used:
 - Nodejs
 
 ## Author & maintainer
 
 [Vighnesh Manjrekar](https://github.com/VighneshManjrekar)
+
+## 🚀 About Me
+GDSC-DMCE Backend Lead 2022
+
+
+
+## Support
+
+For support, email me at vighneshmanjrekar4193@gmail.com
+
+
