@@ -1,6 +1,7 @@
-# Project management
 
-> Backend API for project management application, where users can create projects and add clients to the projects
+# Project management Application
+Backend API for project management application, where users can create projects and add clients to the projects
+
 
 ## Usage
 
@@ -40,9 +41,17 @@ Starter code is already provided in `controllers/main.controllers.js` file.<br>
 ## How to Contribute
 - Create the issue.
 - Fork the Repo.
+- Create a new Branch [git checkout -b "new branch name"]
 - Fix the issue.
 - Generate a Pull Request.
 - Wait for your PR to get merged.
+
+
+## Documentation
+Follow this Blog to know more about API Usage:
+[Documentation](wrike.com/project-management-guide/faq/why-should-i-use-api-in-project-management-software/)
+
+
 
 # Technologies to be used:
 - Nodejs
@@ -50,3 +59,14 @@ Starter code is already provided in `controllers/main.controllers.js` file.<br>
 ## Author & maintainer
 
 [Vighnesh Manjrekar](https://github.com/VighneshManjrekar)
+
+## 🚀 About Me
+I am Your new GDSC Back-End Lead  developer for the academic year 2022-23...
+
+
+
+## Support
+
+For support, email me at vighneshmanjrekar4193@gmail.com
+
+
