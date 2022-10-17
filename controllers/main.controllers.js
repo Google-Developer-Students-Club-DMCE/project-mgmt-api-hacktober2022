@@ -47,6 +47,27 @@ exports.deleteClient = async (req, res, next) => {
 // @route   PUT api/project/:id
 exports.updateProject = async (req, res, next) => {
   // Update project with req.params.id
+
+  if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
+    return res
+      .status(400)
+      .json({ success: false, error: `Invalid Id ${req.params.id}` });
+  }
+
+  let project = await Project.findById(req.params.id);
+
+  if (!project) {
+    return res
+      .status(404)
+      .json({ success: false, error: `No project with id ${req.params.id}` });
+  }
+
+  project = await Project.findByIdAndUpdate(req.params.id, req.body, {
+    new: true,
+    runValidators: true,
+  });
+
+  res.status(200).json({ success: true, project });
 };
 
 // @desc    Update client
