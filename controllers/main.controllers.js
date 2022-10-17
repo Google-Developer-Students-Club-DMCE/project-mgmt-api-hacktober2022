@@ -11,6 +11,19 @@ exports.getIndex = async (req, res, next) => {
 // @route   POST api/project
 exports.postProject = async (req, res, next) => {
   // Create project
+  let projectObj = {
+    name: req.body.name,
+    description: req.body.description,
+    status: req.body.status,
+    clientId: req.body.clientId
+  }
+  const project = await Project.create(projectObj);
+  if (project) {
+    return res.json({ success: true, message: "project created successfully", project: project });
+  }
+  else {
+    return res.json({ success: false, message: "some error occured" });
+  }
 };
 
 // @desc    Create client
