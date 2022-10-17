@@ -5,6 +5,13 @@ const Project = require("../models/Project.model");
 // @route   GET api/
 exports.getIndex = async (req, res, next) => {
   // Fetch all projects and clients
+  try{
+    const projects = await Project.find();
+    const clients = await Client.find();
+    res.status(200).json({ success: true, message: "projects and clients fetched successfully", projects: projects, clients:clients });
+  }catch{
+    res.status(400).json({ success: false, message: "some error occurred"});
+  }
 };
 
 // @desc    Create project

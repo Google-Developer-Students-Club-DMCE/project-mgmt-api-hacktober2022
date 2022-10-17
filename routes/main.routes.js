@@ -17,8 +17,11 @@ const {
 
 router.get("/", getIndex);
 
-router.post("/project", postProject);
-router.post("/client", postClient);
+router
+  .post("/project", postProject)
+
+  router
+  .post("/client", postClient)
 
 router
   .route("/client/:id")
