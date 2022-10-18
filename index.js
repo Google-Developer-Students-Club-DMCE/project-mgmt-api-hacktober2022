@@ -9,8 +9,9 @@ const connectDB = require("./configs/db");
 const app = express();
 
 app.use(cors());
-app.use(express.json())
-app.use("/api",mainRouter)
+app.use(express.json());
+app.use("/api", mainRouter)
+
 
 const PORT = process.env.PORT || 7000;
 
