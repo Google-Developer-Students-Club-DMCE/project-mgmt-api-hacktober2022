@@ -11,7 +11,7 @@ exports.getIndex = async (req, res, next) => {
 // @route   POST api/project
 exports.postProject = async (req, res, next) => {
   // Create project
-  try{
+  try {
     let projectObj = {
       name: req.body.name,
       description: req.body.description,
@@ -21,7 +21,7 @@ exports.postProject = async (req, res, next) => {
     const project = await Project.create(projectObj);
     res.status(200).json({ success: true, message: "project created successfully", project: project });
   }
-  catch{
+  catch {
     res.status(400).json({ success: false, message: "some error occured" });
   }
 };
@@ -65,5 +65,17 @@ exports.updateProject = async (req, res, next) => {
 // @desc    Update client
 // @route   PUT api/client/:id
 exports.updateClient = async (req, res, next) => {
-  // Update client with req.params.id
+  // Update client
+  try {
+    let clientObj = {
+      name: req.body.name,
+      email: req.body.email,
+      phone: req.body.phone
+    }
+    const client = await Client.findByIdAndUpdate(req.params.id, clientObj, { new: true, runValidators: true })
+    res.status(200).json({ success: true, message: "client updated successfully", client: client });
+  }
+  catch {
+    res.status(400).json({ success: false, message: "error occurred" });
+  }
 };
