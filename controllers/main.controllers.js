@@ -54,6 +54,16 @@ exports.deleteProject = async (req, res, next) => {
 // @route   DELETE api/client/:id
 exports.deleteClient = async (req, res, next) => {
   // Delete client with req.params.id
+  try {
+    const { id: _id } = req.params;
+    const docs = await Client.findByIdAndDelete(_id);
+    if(docs != null) res.status(200).json({success: true, data: docs});
+    else {
+      res.status(404).json({success: false, error: "Client Not Found"});
+    }
+  } catch (err) {
+    res.status(400).json({success: false, error: err.message});
+  }
 };
 
 // @desc    Update project
