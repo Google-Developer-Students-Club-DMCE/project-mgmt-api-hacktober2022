@@ -1,3 +1,4 @@
+const mongoose = require("mongoose");
 const Client = require("../models/Client.model");
 const Project = require("../models/Project.model");
 
