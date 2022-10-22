@@ -42,7 +42,29 @@ exports.getProject = async (req, res, next) => {
 // @desc    Get single client
 // @route   GET api/client/:id
 exports.getClient = async (req, res, next) => {
-  // Fetch single client
+  const id = req.params.id;
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+      return res
+        .status(400)
+        .json({ success: false, error: `Invalid Id ${id}` });
+    }
+  try{
+    const client = await Client.findById(id);
+    if(!client){
+      return res.status(404).json({ success: false, error: "Cannot find client with given id" });
+    }
+    const data = {
+      id: client.id,
+      name: client.name,
+      email: client.email,
+      phone: client.phone
+    }
+    res.status(200).json({ success: true, data });
+  }
+  catch(error){
+    console.log(error);
+    res.status(500).json({ success: false, error });
+  }
 };
 
 // @desc    Delete project
