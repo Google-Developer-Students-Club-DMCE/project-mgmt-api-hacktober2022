@@ -37,6 +37,17 @@ exports.postClient = async (req, res, next) => {
 // @route   GET api/project/:id
 exports.getProject = async (req, res, next) => {
   // Fetch single project
+  try {
+    const { id: _id } = req.params;
+    const project = await Project.findById(_id);
+    if(!project) {
+      res.status(404).json({ success: false, message: "Project Not Found" });
+    }
+    res.status(200).json({ success : true, project: project });
+  }
+  catch (error) {
+    res.status(500).json({ success: false, message: "some error occured" });
+  }
 };
 
 // @desc    Get single client
