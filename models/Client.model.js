@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const { Schema, model } = require("mongoose");
 
 const ClientSchema = new mongoose.Schema({
   name: String,
