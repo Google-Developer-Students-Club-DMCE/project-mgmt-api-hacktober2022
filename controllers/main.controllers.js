@@ -31,18 +31,17 @@ exports.getClient = async (req, res, next) => {
   const id = req.params.id;
   try{
     const client = await Client.findById(id);
-    const response = {
+    const data = {
       id: client.id,
       name: client.name,
       email: client.email,
       phone: client.phone
     }
-    res.json(response);
-    res.status(200);
+    res.status(200).json({ success: true, data });
   }
   catch(error){
     console.log(error);
-    res.sendStatus(500);
+    res.status(500).json({ success: false, error });
   }
 };
 
