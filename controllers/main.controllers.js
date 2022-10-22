@@ -37,11 +37,15 @@ exports.postClient = async (req, res, next) => {
 exports.getProject = async (req, res, next) => {
   // Fetch single project
   try {
-    const project = await Project.findById(req.params.id);
-    res.status(200).json({ project: project });
+    const { id: _id } = req.params;
+    const project = await Project.findById(_id);
+    if(!project) {
+      res.status(404).json({ success: false, message: "Project Not Found" });
+    }
+    res.status(200).json({ success : true, project: project });
   }
-  catch {
-    res.status(400).json({ success: false, message: "Unable to find project for given id or some error occured" });
+  catch (error) {
+    res.status(500).json({ success: false, message: "some error occured" });
   }
 };
 
