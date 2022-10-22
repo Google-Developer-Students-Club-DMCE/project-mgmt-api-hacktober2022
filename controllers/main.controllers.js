@@ -29,8 +29,15 @@ exports.getProject = async (req, res, next) => {
 // @route   GET api/client/:id
 exports.getClient = async (req, res, next) => {
   const id = req.params.id;
+  const validIdFormat = /^[a-f\d]{24}$/i;
+  if(!validIdFormat.test(id)){
+    return res.status(400).json({ success: false, error: "Invalid id format" });
+  }
   try{
     const client = await Client.findById(id);
+    if(!client){
+      return res.status(404).json({ success: false, error: "Cannot find client with given id" });
+    }
     const data = {
       id: client.id,
       name: client.name,
