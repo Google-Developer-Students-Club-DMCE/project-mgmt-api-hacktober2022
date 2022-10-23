@@ -6,19 +6,25 @@
 Contributors are expected to write code for the routes mentioned in `routes/main.routes.js` file.<br>
 Starter code is already provided in `controllers/main.controllers.js` file.<br>
 
-## Format for Response 
+## Format for Response
 
 * Successful response -> 
+```
 res.status(statuscode).json({success: true, data:your response goes here})
+```
 
 * Unsuccessful response ->
+```
 res.status(statuscode).json({success: false, error: err.message | custom error message })
+```
 
 * statuscodes
+```
 200 -> successful query
 400 -> Invalid id
 404 -> ID not found
 500 -> Internal server error <catch block error>
+```
   
   
 
