@@ -1,18 +1,32 @@
 # Project-mgmt-api-Hactoberfest-2022
 
+# Hacktoberfest22
+## KickStart to Open Source Event 
+
+## What is Hacktoberfest?
+A month-long celebration from October 1st - 31st sponsored by [Digital Ocean](https://hacktoberfest.digitalocean.com/) and [GitHub](https://github.com/blog/2433-celebrate-open-source-this-october-with-hacktoberfest) to get people involved in [Open Source](https://github.com/open-source).
+
+
+<img src="https://res.cloudinary.com/practicaldev/image/fetch/s--lGJu31oG--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ymlmr15l83rrjq8natft.jpg" width="700">
+
+## Specifically for Hacktoberfest:
+
+  Your PR must be created between October 1 and October 31 (in any time zone, UTC-12 thru UTC+14).
+ 
+  Your PR must be made to a public, unarchived repository.
+
 
 # Table of contents
 1. [Introduction ](#kt0)
 2. [Objective ](#kt1)
 3. [Usage ](#kt2)
-4. [How to contribute to this project ](#kt3)
-5. [Author & maintainer ](#kt4)
+4. [Author & maintainer ](#kt3)
 
 
 <div id='kt0'>
 
 ## Introduction 
-The project managment api has been developed to override the problems in the praticing manual system. This software is supported to eliminate and in some cases reduce the hardships faced by the existing system.Moreover this system is designed for the particular need where users can create projects and add clients to the projects in a smooth and effective manner.Every organization whether small or big has challenges to overcome in managing the clients of the project therefore we design backendd api for project managment that are adapted to your managerial requirements.
+The project managment api has been developed to override the problems in the praticing manual system.Moreover this system is designed for the particular need where users can list down thier various types of created projects and can add clients to the projects in a smooth and effective manner.
 
 <div id='kt1'>
 
@@ -57,45 +71,7 @@ node seeder -d
 node seeder -i
 ```
 
-
 <div id='kt3'>
-
-## How to contribute to this project 
-  
-Contributors are expected to write code for the routes mentioned in `routes/main.routes.js` file.<br>
-Starter code is already provided in `controllers/main.controllers.js` file.<br>
-
-## Getting started
-  
-* Create the issue  
-* Fork this repository (Click the Fork button in the top right of this page, click your Profile Image)
-* Clone your fork down to your local machine
-
-```markdown
-git clone https://github.com/your-username/project-mgmt-api-Hactoberfest-2022.git
-```
-
-* Create a branch
-
-```markdown
-git checkout -b branch-name
-```
-
-* Make your changes (choose from any task below)
-* Fix the issue
-* Commit and push
-
-```markdown
-git add .
-git commit -m 'Commit message'
-git push origin branch-name
-```
-
-* Create a new pull request from your forked repository (Click the `New Pull Request` button located at the top of your repo)
-* Wait for your PR review and merge approval!
-* __Star this repository__ if you had fun!
-
-<div id='kt4'>
 
 ## Author & maintainer
 
@@ -107,5 +83,3 @@ GDSC-DMCE Backend Lead 2022
 ## Support
 
 For support, email me at vighneshmanjrekar4193@gmail.com
-
-
