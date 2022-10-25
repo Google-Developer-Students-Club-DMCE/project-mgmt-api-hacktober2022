@@ -31,6 +31,23 @@ exports.postProject = async (req, res, next) => {
 // @route   POST api/client
 exports.postClient = async (req, res, next) => {
   // Create client
+  try {
+    
+    const prevClient = await Client.findOne({email: req.body.email});
+    if (prevClient) {
+      return res.status(400).send("Ye email ke saath, Client allready hei! Naya Email Dal Bhai");
+    }
+    let clientObj = {
+      name : req.body.name,
+      email : req.body.email,
+      phone : req.body.phone
+    }
+    const client = await Client.create(clientObj);
+
+    res.status(200).json({success:true, message:"Client added successfully bro.", client:client })
+  } catch (error) {
+    res.status(500).json({ success: false, message: "some error occured" });
+  }
 };
 
 // @desc    Get single project
